@@ -1,0 +1,247 @@
+spring:
+  profiles:
+    active: local
+---
+# ----------------------------------------
+# CORE PROPERTIES
+# ----------------------------------------
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))
+    username: dev
+    password: dev
+    max-active: 20
+    max-idle: 20
+    min-idle: 20
+    initial-size: 20
+    max-wait: 3000
+# SECURITY (SecurityProperties)
+security.basic.enabled: false
+# LOGGING
+logging:
+  level:
+    jp.co.loft.backoffice: DEBUG
+    org.springframework: WARN
+    org.springframework.web.servlet: INFO
+    jdbc.sqltiming: DEBUG
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+server:
+  port: 8082
+# ----------------------------------------
+# ACTUATOR PROPERTIES
+# ----------------------------------------
+# MANAGEMENT HTTP SERVER (ManagementServerProperties)
+management:
+  port: 8082
+  context-path: /pda
+# ENDPOINTS (AbstractEndpoint subclasses)
+endpoints:
+  autoconfig:
+    sensitive: false
+  beans:
+    sensitive: false
+  configprops:
+    sensitive: false
+  dump:
+    sensitive: false
+  env:
+    sensitive: false
+  health:
+    sensitive: false
+    time-to-live: 1000
+  info:
+    sensitive: false
+  mappings:
+    sensitive: false
+  metrics:
+    sensitive: false
+  shutdown:
+    sensitive: false
+    enabled: true
+  trace:
+    sensitive: false
+---
+# ----------------------------------------
+# CORE PROPERTIES
+# ----------------------------------------
+spring:
+  profiles: develop
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.29.81.5)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=lfddb)))
+    username: lfddb
+    password: aeMoh!Or
+    max-active: 20
+    max-idle: 20
+    min-idle: 20
+    initial-size: 20
+    max-wait: 3000
+# SECURITY (SecurityProperties)
+security.basic.enabled: false
+# LOGGING
+logging:
+  level:
+    jp.co.loft.backoffice: DEBUG
+    org.springframework: WARN
+    org.springframework.web.servlet: INFO
+    jdbc.sqltiming: DEBUG
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+server:
+  port: 8082
+# ----------------------------------------
+# ACTUATOR PROPERTIES
+# ----------------------------------------
+# MANAGEMENT HTTP SERVER (ManagementServerProperties)
+management:
+  port: 8082
+  context-path: /pda
+# ENDPOINTS (AbstractEndpoint subclasses)
+endpoints:
+  autoconfig:
+    sensitive: false
+  beans:
+    sensitive: false
+  configprops:
+    sensitive: false
+  dump:
+    sensitive: false
+  env:
+    sensitive: false
+  health:
+    sensitive: false
+    time-to-live: 1000
+  info:
+    sensitive: false
+  mappings:
+    sensitive: false
+  metrics:
+    sensitive: false
+  shutdown:
+    sensitive: false
+    enabled: true
+  trace:
+    sensitive: false
+---
+# ----------------------------------------
+# CORE PROPERTIES
+# ----------------------------------------
+spring:
+  profiles: staging
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.29.81.5)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=lfsdb)))
+    username: lfsdb
+    password: w!ePh9ca
+    max-active: 20
+    max-idle: 20
+    min-idle: 20
+    initial-size: 20
+    max-wait: 3000
+# SECURITY (SecurityProperties)
+security.basic.enabled: false
+# LOGGING
+logging:
+  level:
+    jp.co.loft.backoffice: INFO
+    org.springframework: WARN
+    org.springframework.web.servlet: INFO
+    jdbc.sqltiming: ERROR
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+server:
+  port: 8082
+# ----------------------------------------
+# ACTUATOR PROPERTIES
+# ----------------------------------------
+# MANAGEMENT HTTP SERVER (ManagementServerProperties)
+management:
+  port: 8082
+  context-path: /pda
+# ENDPOINTS (AbstractEndpoint subclasses)
+endpoints:
+  autoconfig:
+    sensitive: false
+  beans:
+    sensitive: false
+  configprops:
+    sensitive: false
+  dump:
+    sensitive: false
+  env:
+    sensitive: false
+  health:
+    sensitive: false
+    time-to-live: 1000
+  info:
+    sensitive: false
+  mappings:
+    sensitive: false
+  metrics:
+    sensitive: false
+  shutdown:
+    sensitive: false
+    enabled: true
+  trace:
+    sensitive: false
+---
+# ----------------------------------------
+# CORE PROPERTIES
+# ----------------------------------------
+spring:
+  profiles: production
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.28.31.5)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=lfpdb)))
+    username: lfpdb
+    password: Rah7jead
+    max-active: 20
+    max-idle: 20
+    min-idle: 20
+    initial-size: 20
+    max-wait: 3000
+# SECURITY (SecurityProperties)
+security.basic.enabled: false
+# LOGGING
+logging:
+  level:
+    jp.co.loft.backoffice: INFO
+    org.springframework: WARN
+    org.springframework.web.servlet: INFO
+    jdbc.sqltiming: ERROR
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+server:
+  port: 8082
+# ----------------------------------------
+# ACTUATOR PROPERTIES
+# ----------------------------------------
+# MANAGEMENT HTTP SERVER (ManagementServerProperties)
+management:
+  port: 8082
+  context-path: /pda
+# ENDPOINTS (AbstractEndpoint subclasses)
+endpoints:
+  autoconfig:
+    sensitive: false
+  beans:
+    sensitive: false
+  configprops:
+    sensitive: false
+  dump:
+    sensitive: false
+  env:
+    sensitive: false
+  health:
+    sensitive: false
+    time-to-live: 1000
+  info:
+    sensitive: false
+  mappings:
+    sensitive: false
+  metrics:
+    sensitive: false
+  shutdown:
+    sensitive: false
+    enabled: true
+  trace:
+    sensitive: false
